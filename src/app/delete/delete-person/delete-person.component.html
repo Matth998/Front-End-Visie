@@ -1,0 +1,15 @@
+<div class="bg2 pt-5 pb-5">
+    <div class="container-fluid mb-5">
+      <div class="text-center mt-5 text-white">
+        <h1 class="mb-3">Apagar Registro da Tabela</h1>
+        <h2 class="mb-3"> Você tem certeza que deseja apagar esse registro da tabela? </h2>
+        <h5 class="text-center">Pessoa: {{pessoas.nome}}</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <a class="btn-cancel mt-4 mr-4" routerLink="/person">Não</a>
+          <a class="btn mt-4" (click)="delete()">Sim</a>
+        </div>
+      </div>
+    </div>
+  </div>
