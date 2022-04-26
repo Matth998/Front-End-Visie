@@ -20,4 +20,17 @@ export class PersonService {
 
   }
 
+  getByIdPerson(id: number): Observable<Pessoas>{
+
+    return this.http.get<Pessoas>(`http://localhost:4000/people/${id}`);
+
+  }
+
+  put(person: Pessoas, id:number): Observable<Pessoas>{
+
+
+    return this.http.put<Pessoas>(`http://local:host:4000/people/${id}`, person);
+
+  }
+
 }

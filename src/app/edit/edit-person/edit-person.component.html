@@ -1,0 +1,33 @@
+<div class="update-form">
+  <form>
+    <div class="form-group">
+      <label for="nome" class="ml-2"> Nome</label>
+      <input [(ngModel)]="pessoas.nome" type="text" class="form-control item" name="nome" id="nome"
+        placeholder="Username" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="rg" class="ml-2"> RG </label>
+      <input [(ngModel)]="pessoas.rg" type="text" class="form-control item" name="rg" id="rg" placeholder="Rg">
+    </div>
+    <div class="form-group">
+      <label for="cpf" class="ml-2"> CPF </label>
+      <input [(ngModel)]="pessoas.cpf" type="text" class="form-control item" name="cpf" id="cpf" placeholder="CPF">
+    </div>
+    <div class="form-group">
+      <label for="data_nascimento" class="ml-2"> Data de Nascimento </label>
+      <input [(ngModel)]="pessoas.data_nascimento" type="text" class="form-control item" name="data_nascimento"
+        id="data_nascimento" placeholder="Data de Nascimento">
+    </div>
+    <div class="form-group">
+      <div class="form-group">
+        <label for="data_admissao" class="ml-2"> Data de Admissão </label>
+        <input [(ngModel)]="pessoas.data_admissao" type="text" class="form-control item" name="data_admissao"
+          id="data_nascimento" placeholder="Data de Nascimento">
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-block update-person" routerLink="/person">Cancelar</button>
+      <button type="button" class="btn btn-block update-person" (click)="update(pessoas.id)">Atualizar</button>
+    </div>
+  </form>
+</div>
