@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditPersonComponent } from './edit/edit-person/edit-person.component';
 import { DeletePersonComponent } from './delete/delete-person/delete-person.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
 
@@ -15,6 +18,9 @@ const routes: Routes = [
   {path: 'person/:id', component: PersonItemComponent},
   {path: 'edit-person/:id', component: EditPersonComponent},
   {path: 'delete-person/:id', component: DeletePersonComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: '**', component: Error404Component}
 
 ];
 

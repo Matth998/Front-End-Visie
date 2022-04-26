@@ -16,6 +16,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FirstNamePipe } from './pipe/first-name.pipe';
 import { EditPersonComponent } from './edit/edit-person/edit-person.component';
 import { DeletePersonComponent } from './delete/delete-person/delete-person.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { DeletePersonComponent } from './delete/delete-person/delete-person.comp
     PersonItemComponent,
     FirstNamePipe,
     EditPersonComponent,
-    DeletePersonComponent
+    DeletePersonComponent,
+    LoginComponent,
+    RegisterComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
