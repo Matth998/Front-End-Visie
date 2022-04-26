@@ -16,7 +16,7 @@ export class PersonService {
 
   getAllPerson(): Observable<Pessoas[]> {
 
-    return this.http.get<Pessoas[]>(`http://localhost:3000/api/pessoas`);
+    return this.http.get<Pessoas[]>(`http://localhost:4000/people`);
 
   }
 

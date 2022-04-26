@@ -1,6 +1,6 @@
 export class Pessoas{
 
-    id_pessoa: number;
+    id: number;
     nome: string;
     rg: string;
     cpf: string;
