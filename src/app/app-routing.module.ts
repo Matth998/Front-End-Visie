@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'person', component: PersonListComponent},
   {path: 'person/:id', component: PersonItemComponent},
   {path: 'edit-person/:id', component: EditPersonComponent},
-  {path: 'delete-person/:id', component: DeletePersonComponent}
+  {path: 'delete-person/:id', component: DeletePersonComponent},
 
 ];
 

@@ -10,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class PersonListComponent implements OnInit {
 
   pessoas: Pessoas = new Pessoas();
+  filteredPeople: Pessoas[] = [];
   listPerson: Pessoas[];
+  namePerson: string
 
   constructor(
 
@@ -33,6 +35,7 @@ export class PersonListComponent implements OnInit {
       next: pessoas => {
 
         this.listPerson = pessoas;
+        this.filteredPeople = pessoas;
 
       },
 
@@ -42,9 +45,9 @@ export class PersonListComponent implements OnInit {
 
   }
 
-  postPerson(){
+  postPerson() {
 
-    this.personService.post(this.pessoas).subscribe((resp: Pessoas) =>{
+    this.personService.post(this.pessoas).subscribe((resp: Pessoas) => {
 
       this.pessoas = resp;
       alert("Registro feito com sucesso!");
@@ -56,5 +59,20 @@ export class PersonListComponent implements OnInit {
 
   }
 
+  set filter(value: string) {
+
+    this.namePerson = value;
+
+    this.listPerson = this.filteredPeople.filter((resp: Pessoas) =>
+
+      resp.nome.toLocaleLowerCase().indexOf(this.namePerson.toLocaleLowerCase()) > -1);
+
+  }
+
+  get filter() {
+
+    return this.namePerson
+
+  }
 
 }

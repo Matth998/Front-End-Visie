@@ -11,7 +11,7 @@
               </div>
               <div class="col-sm-9 col-xs-12 text-right">
                 <div class="btn_group">
-                  <input type="text" class="form-control" placeholder="Search">
+                  <input [(ngModel)]="filter" type="text" class="form-control " placeholder="Search Course...">
                 </div>
               </div>
             </div>
@@ -31,6 +31,8 @@
                   <td>{{persons.data_admissao | date: 'dd/MM/yyyy'}}</td>
                   <td>
                     <ul class="action-list">
+                      <li><a [routerLink]="['/person', persons.id]" data-tip="info"><i class="fa fa-info-circle"
+                            aria-hidden="true"></i></a></li>
                       <li><a [routerLink]="['/edit-person', persons.id]" data-tip="edit"><i class="fa fa-edit"></i></a>
                       </li>
                       <li><a [routerLink]="['/delete-person', persons.id]" data-tip="delete"><i
@@ -147,7 +149,8 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button class="btn" (click)="postPerson()" data-dismiss="modal"><i class="fa fa-plus mr-2" aria-hidden="true"></i> Adicionar</button>
+                    <button class="btn" (click)="postPerson()" data-dismiss="modal"><i class="fa fa-plus mr-2"
+                        aria-hidden="true"></i> Adicionar</button>
                   </div>
                 </form>
               </div>

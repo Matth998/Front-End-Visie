@@ -1,1 +1,71 @@
-<p>person-item works!</p>
+<div class="container-fluid pb-5 pt-5 bg2">
+
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center">
+
+      <div class="card mb-3 bg-card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <h6 class="mb-0 text-white">Nome</h6>
+            </div>
+            <div class="col-sm-7 text-white">
+              {{pessoas.nome}}
+            </div>
+          </div>
+          <hr class="border-light">
+          <div class="row">
+            <div class="col-sm-5">
+              <h6 class="mb-0 text-white">RG</h6>
+            </div>
+            <div class="col-sm-7 text-white">
+              {{pessoas.rg}}
+            </div>
+          </div>
+          <hr class="border-light">
+          <div class="row">
+            <div class="col-sm-5">
+              <h6 class="mb-0 text-white">CPF</h6>
+            </div>
+            <div class="col-sm-7 text-white">
+              {{pessoas.cpf}}
+            </div>
+          </div>
+          <hr class="border-light">
+          <div class="row">
+            <div class="col-sm-5 text-white">
+              <h6 class="mb-0">Data de Nascimento</h6>
+            </div>
+            <div class="col-sm-7 text-white">
+              {{pessoas.data_nascimento | date: 'dd/MM/yyyy'}}
+            </div>
+          </div>
+          <hr class="border-light">
+          <div class="row">
+            <div class="col-sm-5 text-white">
+              <h6 class="mb-0">Data de Admissão</h6>
+            </div>
+            <div class="col-sm-7 text-white">
+              {{pessoas.data_admissao | date: 'dd/MM/yyyy'}}
+            </div>
+          </div>
+          <hr class="border-light">
+          <div class="row">
+            <div class="col-sm-5">
+              <h6 class="mb-0 text-white">Função</h6>
+            </div>
+            <div class="col-sm-7 text-white">
+              {{pessoas.funcao}}
+            </div>
+          </div>
+          <hr class="border-light">
+          <div class="row">
+            <div class="col-sm-12">
+              <a class="btn" [routerLink]="['/edit-person', pessoas.id]">Editar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
