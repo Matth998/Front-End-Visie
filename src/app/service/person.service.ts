@@ -39,4 +39,10 @@ export class PersonService {
 
   }
 
+  delete(id:number){
+
+    return this.http.delete(`http://localhost:4000/people/${id}`);
+
+  }
+
 }

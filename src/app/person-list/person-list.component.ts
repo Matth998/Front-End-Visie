@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonListComponent implements OnInit {
 
-  Pessoas: Pessoas = new Pessoas();
+  pessoas: Pessoas = new Pessoas();
   listPerson: Pessoas[];
 
   constructor(
@@ -36,9 +36,25 @@ export class PersonListComponent implements OnInit {
 
       },
 
-      error: err => { console.log('Error: ', err) }
+      error: err => { console.log('Error: ', err); }
 
     });
 
   }
+
+  postPerson(){
+
+    this.personService.post(this.pessoas).subscribe((resp: Pessoas) =>{
+
+      this.pessoas = resp;
+      alert("Registro feito com sucesso!");
+      this.pessoas = new Pessoas();
+
+      this.findAllPerson();
+
+    })
+
+  }
+
+
 }

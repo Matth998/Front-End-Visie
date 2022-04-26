@@ -15,6 +15,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FirstNamePipe } from './pipe/first-name.pipe';
 import { EditPersonComponent } from './edit/edit-person/edit-person.component';
+import { DeletePersonComponent } from './delete/delete-person/delete-person.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EditPersonComponent } from './edit/edit-person/edit-person.component';
     PersonListComponent,
     PersonItemComponent,
     FirstNamePipe,
-    EditPersonComponent
+    EditPersonComponent,
+    DeletePersonComponent
   ],
   imports: [
     BrowserModule,
