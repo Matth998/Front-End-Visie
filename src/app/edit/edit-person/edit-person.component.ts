@@ -38,13 +38,24 @@ export class EditPersonComponent implements OnInit {
 
   }
 
+  post(){
+
+    this.pessoasService.post(this.pessoas).subscribe((resp: Pessoas) =>{
+
+      this.pessoas = resp;
+      alert("Pessoa adicionada com sucesso")
+
+    })
+
+  }
+
   update(id:number) {
 
 
     this.pessoasService.put(this.pessoas, id).subscribe((resp: Pessoas) => {
 
       this.pessoas = resp;
-      alert("Postagem atualizada com sucesso!");
+      alert("Pessoa atualizada com sucesso!");
       this.router.navigate(['/person']);
 
     })

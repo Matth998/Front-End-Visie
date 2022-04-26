@@ -26,10 +26,16 @@ export class PersonService {
 
   }
 
+  post(person: Pessoas): Observable<Pessoas>{
+
+    return this.http.post<Pessoas>(`http://localhost:4000/people`, person);
+
+  }
+
   put(person: Pessoas, id:number): Observable<Pessoas>{
 
 
-    return this.http.put<Pessoas>(`http://local:host:4000/people/${id}`, person);
+    return this.http.put<Pessoas>(`http://localhost:4000/people/${id}`, person);
 
   }
 
