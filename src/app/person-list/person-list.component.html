@@ -1,0 +1,46 @@
+<div class="container-fluid pt-5 pb-5 bg2">
+
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="panel">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col col-sm-3 col-xs-12">
+                <h4 class="title">Person <span>List</span></h4>
+              </div>
+              <div class="col-sm-9 col-xs-12 text-right">
+                <div class="btn_group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Data de Admissão</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let persons of listPerson">
+                  <td>{{persons.nome}}</td>
+                  <td>{{persons.data_admissao}}</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
