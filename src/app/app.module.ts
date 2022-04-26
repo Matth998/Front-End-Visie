@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FirstNamePipe } from './pipe/first-name.pipe';
+import { EditPersonComponent } from './edit/edit-person/edit-person.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FirstNamePipe } from './pipe/first-name.pipe';
     HomeComponent,
     PersonListComponent,
     PersonItemComponent,
-    FirstNamePipe
+    FirstNamePipe,
+    EditPersonComponent
   ],
   imports: [
     BrowserModule,

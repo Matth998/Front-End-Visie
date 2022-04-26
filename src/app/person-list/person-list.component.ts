@@ -1,7 +1,6 @@
 import { Pessoas } from './../model/pessoas';
 import { PersonService } from './../service/person.service';
 import { Component, OnInit } from '@angular/core';
-import { toArray } from 'rxjs/operators';
 
 @Component({
   selector: 'app-person-list',
