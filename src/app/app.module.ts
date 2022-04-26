@@ -13,6 +13,7 @@ import { PersonItemComponent } from './person-item/person-item.component';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FirstNamePipe } from './pipe/first-name.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FooterComponent,
     HomeComponent,
     PersonListComponent,
-    PersonItemComponent
+    PersonItemComponent,
+    FirstNamePipe
   ],
   imports: [
     BrowserModule,
